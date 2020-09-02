@@ -1,7 +1,25 @@
-from python_practice.class_python.game.game import Game
+class Game():
+    def __init__(self, my_hp, your_hp):
+        self.my_hp = my_hp
+        self.my_power = 200
+        self.your_hp = your_hp
+        self.your_power = 199
+
+    def fight(self):
+        while True:
+            self.my_hp = self.my_hp - self.your_power
+            self.your_hp = self.your_hp - self.my_power
+            print(self.my_hp)
+            if self.my_hp <= 0:
+                print("我输了")
+                break
+            elif self.your_hp <= 0:
+                print("你输了")
+                break
+    def demo2(self, a, b):
+        print(a+b)
 
 
-# 快捷键导入， 鼠标放到类名处, alt/option+回车
 class HouYi(Game):
     """
     后裔，后裔继承了Game的hp 和power。并多了护甲属性。
@@ -28,6 +46,11 @@ class HouYi(Game):
                 print("你输了")
                 break
 
+
 houyi = HouYi(1000, 1300)
 houyi.fight()
+
+
+
+
 

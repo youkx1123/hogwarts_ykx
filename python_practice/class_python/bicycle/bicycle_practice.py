@@ -9,5 +9,6 @@
 class Bicycle:
     def run(self,km):
         print(f"骑行了{km}公里")
-class EBicycle(Bcicycle):
-
+class EBicycle(Bicycle):
+    def run(self, km):
+        print(f"骑行了{km}公里")
