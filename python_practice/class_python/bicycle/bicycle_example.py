@@ -6,9 +6,12 @@
 2. run(km) 方法用于骑行,每骑行10km消耗电量1度,当电量消耗尽时调用Bicycle的run方法骑行，
 通过传入的骑行里程数，显示骑行结果
 """
+
+
 class Bicycle:
     def run(self, km):
         print(f"一共用脚骑了{km}公里，累死了")
+
 
 # 电动自行车类EBicycle继承自Bicycle
 class EBicycle(Bicycle):
@@ -18,7 +21,7 @@ class EBicycle(Bicycle):
 
     def fill_charge(self, vol):
 
-        self.valume = self.valume+vol
+        self.valume = self.valume + vol
         print(f"充了{vol}度电, 现在的电量为{self.valume}")
 
     def run(self, km):
@@ -29,10 +32,10 @@ class EBicycle(Bicycle):
         :return:
         """
         # 1. 获得目前电量所能电动骑行的最大里程数
-        power_km = self.valume*10
+        power_km = self.valume * 10
         # 如果目前电量所能电动骑行的最大里程数大于要骑行的里程数，
-        #那么全程用电瓶就足够了
-        if power_km>=km:
+        # 那么全程用电瓶就足够了
+        if power_km >= km:
             print(f"我使用电瓶电量骑了{km}公里")
         else:
             print(f"我使用电瓶骑行了{power_km}")
@@ -41,7 +44,7 @@ class EBicycle(Bicycle):
             # bike.run(km - power_km)
             # 继承调用
             #
-            super().run(km-power_km)
+            super().run(km - power_km)
 
 
 ebike = EBicycle(10)
@@ -50,5 +53,3 @@ ebike.run(200)
 #
 # bike = Bicycle()
 # bike.run(10)
-
-
