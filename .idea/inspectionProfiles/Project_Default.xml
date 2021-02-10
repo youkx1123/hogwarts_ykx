@@ -22,6 +22,10 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="numpy.random._examples.cython.extending" />
+          <option value="test_seleniumdemo.test_demo111.Options" />
+          <option value="selenium.webdriver.chrome.get" />
+          <option value="tuple.*" />
+          <option value="random.random.randint" />
         </list>
       </option>
     </inspection_tool>

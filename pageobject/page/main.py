@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 
 from pageobject.page.base_page import BasePage
 from pageobject.page.login import Login
+from pageobject.page.register import Register
 
 
 class Main(BasePage):

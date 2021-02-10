@@ -7,6 +7,10 @@ class BasePage:
     _base_url = "https://work.weixin.qq.com/"
 
     def __init__(self, driver: webdriver = None) -> object:
+        """
+
+        :rtype: object
+        """
         if driver is None:
             self._driver = webdriver.Chrome()
         else:
@@ -15,4 +19,4 @@ class BasePage:
             self._driver.get(self._base_url)
 
     def find(self, by, locator):
-        return self._driver.find.element(by, locator)
+        return self._driver.find_element(by, locator)
