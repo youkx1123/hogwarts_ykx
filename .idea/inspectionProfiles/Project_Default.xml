@@ -26,6 +26,7 @@
           <option value="selenium.webdriver.chrome.get" />
           <option value="tuple.*" />
           <option value="random.random.randint" />
+          <option value="Base" />
         </list>
       </option>
     </inspection_tool>

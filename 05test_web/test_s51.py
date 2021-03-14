@@ -13,10 +13,10 @@ class TestSelenium1:
         self.driver.implicitly_wait(3)
 
     def teardown(self):
-        time.sleep(3)
+        time.sleep(10)
         self.driver.quit()
 
     def test_SR(self):
         # self.driver.get("https://ceshiren.com/")
-        self.driver.find_element(By.ID, "kw").send_keys("霍格沃滋学院")
+        self.driver.find_element(By.ID, "kw").send_keys("高考分数线")
         self.driver.find_element(By.ID, "su").click()
