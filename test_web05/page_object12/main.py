@@ -1,8 +1,9 @@
-from test_web.tmp.hogwarts import Hogwarts
+from test_web05.page_object12.hogwarts import Hogwarts
 
 
 class Main:
-    def send_key(self):
+
+    def send_keys(self):
         pass
 
     def click(self):
@@ -11,7 +12,11 @@ class Main:
     def title(self):
         pass
 
-    @property
-    def click_first_link(self):
+
+    def click_first_link():
+
         # click link
         return Hogwarts()
+
+
+
